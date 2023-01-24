@@ -1,0 +1,83 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/cocon/Documents/Computer_Architecture/ecen4243S23-main/lab0
+T_opt1
+!s110 1674519294
+V3KcHjZQJIXW=f=YMW9NCW1
+04 2 4 work RF fast 0
+=1-f8e4e3ccc6da-63cf22fe-1ac-457c
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt1
+OL;O;2021.1;73
+vregfile
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1674519290
+!i10b 1
+!s100 aTM1ZHLniEHgDFh3TI:cD3
+Io7j2N<TL0;<13Sd`?f:gj3
+S1
+R1
+w1674516865
+8regfile.sv
+Fregfile.sv
+!i122 0
+L0 1 22
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z7 !s108 1674519290.000000
+Z8 !s107 RF_tb.sv|regfile.sv|
+Z9 !s90 -reportprogress|300|regfile.sv|RF_tb.sv|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vRF
+R3
+R4
+!i10b 1
+!s100 Vjz;Q4JfXOP?2P:zBXNZe0
+InWO;<6;:5^KAU6POM0RUJ3
+S1
+R1
+w1674519285
+8RF_tb.sv
+FRF_tb.sv
+!i122 0
+L0 1 71
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R2
+n@r@f

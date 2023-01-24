@@ -1,0 +1,1100 @@
+# //  ModelSim SE-64 2021.1 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do FSM.do
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 15:03:18 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 15:03:18 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 15:03:18 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do FSM.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 15:06:25 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 15:06:25 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:06:28 on Jan 23,2023, Elapsed time: 0:03:10
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 15:06:28 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do FSM.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 15:07:23 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 15:07:23 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:07:25 on Jan 23,2023, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 15:07:25 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do FSM.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 15:08:15 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 15:08:15 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:08:18 on Jan 23,2023, Elapsed time: 0:00:53
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 15:08:18 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do FSM.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 15:10:12 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 15:10:12 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:10:14 on Jan 23,2023, Elapsed time: 0:01:56
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 15:10:15 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do FSM.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 15:11:13 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 15:11:13 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:11:15 on Jan 23,2023, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 15:11:15 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 16:37:59 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# ** Error: (vlog-13069) regfile.sv(16): near "=": syntax error, unexpected '='.
+# ** Error: (vlog-13069) regfile.sv(17): near "=": syntax error, unexpected '='.
+# -- Compiling module RF
+# ** Error: (vlog-13069) RF_tb.sv(50): near "rand": syntax error, unexpected rand.
+# End time: 16:37:59 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/modeltech64_2021.1/win64/vlog failed.
+# Error in macro ./RF.do line 30
+# C:/modeltech64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog regfile.sv RF_tb.sv"
+do FSM.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 16:40:10 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:40:10 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:40:13 on Jan 23,2023, Elapsed time: 1:28:58
+# Errors: 1, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:40:13 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 16:40:30 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# ** Error: (vlog-13069) regfile.sv(15): near "[": syntax error, unexpected '['.
+# ** Error: regfile.sv(15): (vlog-13205) Syntax error found in the scope following 'rf'. Is there a missing '::'?
+# -- Compiling module RF
+# ** Error: (vlog-13069) RF_tb.sv(8): near "rand": syntax error, unexpected rand.
+# ** Error: (vlog-13069) regfile.sv(15): near "w": syntax error, unexpected end of source code.
+# ** Error: regfile.sv(15): (vlog-13205) Syntax error found in the scope following 'w'. Is there a missing '::'?
+# End time: 16:40:30 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: C:/modeltech64_2021.1/win64/vlog failed.
+# Error in macro ./RF.do line 30
+# C:/modeltech64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog regfile.sv RF_tb.sv"
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 16:42:08 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# ** Error: (vlog-13069) regfile.sv(15): near "[": syntax error, unexpected '['.
+# ** Error: regfile.sv(15): (vlog-13205) Syntax error found in the scope following 'rf'. Is there a missing '::'?
+# -- Compiling module RF
+# ** Error: (vlog-13069) RF_tb.sv(8): near "rand": syntax error, unexpected rand.
+# ** Error: (vlog-13069) regfile.sv(15): near "w": syntax error, unexpected end of source code.
+# ** Error: regfile.sv(15): (vlog-13205) Syntax error found in the scope following 'w'. Is there a missing '::'?
+# End time: 16:42:08 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: C:/modeltech64_2021.1/win64/vlog failed.
+# Error in macro ./RF.do line 30
+# C:/modeltech64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog regfile.sv RF_tb.sv"
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 16:50:17 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# ** Error: (vlog-13069) regfile.sv(16): near "=": syntax error, unexpected '='.
+# ** Error: (vlog-13069) regfile.sv(17): near "=": syntax error, unexpected '='.
+# -- Compiling module RF
+# ** Error: (vlog-13069) RF_tb.sv(8): near "rand": syntax error, unexpected rand.
+# End time: 16:50:17 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/modeltech64_2021.1/win64/vlog failed.
+# Error in macro ./RF.do line 30
+# C:/modeltech64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog regfile.sv RF_tb.sv"
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 16:51:48 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# ** Error: (vlog-13069) regfile.sv(16): near "=": syntax error, unexpected '='.
+# ** Error: regfile.sv(16): (vlog-13205) Syntax error found in the scope following 'rd1'. Is there a missing '::'?
+# -- Compiling module RF
+# ** Error: (vlog-13069) RF_tb.sv(8): near "rand": syntax error, unexpected rand.
+# End time: 16:51:48 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/modeltech64_2021.1/win64/vlog failed.
+# Error in macro ./RF.do line 30
+# C:/modeltech64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog regfile.sv RF_tb.sv"
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 16:55:06 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# ** Error: (vlog-13069) regfile.sv(17): near "if": syntax error, unexpected if, expecting ';'.
+# ** Error: (vlog-13069) regfile.sv(21): near "!": syntax error, unexpected '!'.
+# -- Compiling module RF
+# ** Error: (vlog-13069) RF_tb.sv(8): near "rand": syntax error, unexpected rand.
+# End time: 16:55:06 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/modeltech64_2021.1/win64/vlog failed.
+# Error in macro ./RF.do line 30
+# C:/modeltech64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog regfile.sv RF_tb.sv"
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 16:55:48 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# ** Error: regfile.sv(17): The generate if condition must be a constant expression.
+# ** Error: regfile.sv(21): The generate if condition must be a constant expression.
+# -- Compiling module RF
+# ** Error: (vlog-13069) RF_tb.sv(8): near "rand": syntax error, unexpected rand.
+# End time: 16:55:48 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/modeltech64_2021.1/win64/vlog failed.
+# Error in macro ./RF.do line 30
+# C:/modeltech64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog regfile.sv RF_tb.sv"
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:06:12 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# ** Error: (vlog-13069) regfile.sv(18): near "=": syntax error, unexpected '='.
+# ** Error: (vlog-13069) regfile.sv(19): near "=": syntax error, unexpected '='.
+# -- Compiling module RF
+# ** Error: (vlog-13069) RF_tb.sv(8): near "rand": syntax error, unexpected rand.
+# End time: 17:06:13 on Jan 23,2023, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+# ** Error: C:/modeltech64_2021.1/win64/vlog failed.
+# Error in macro ./RF.do line 30
+# C:/modeltech64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog regfile.sv RF_tb.sv"
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:11:48 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# ** Error: (vlog-13069) RF_tb.sv(8): near "rand": syntax error, unexpected rand.
+# End time: 17:11:48 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/modeltech64_2021.1/win64/vlog failed.
+# Error in macro ./RF.do line 30
+# C:/modeltech64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog regfile.sv RF_tb.sv"
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:21:23 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:21:24 on Jan 23,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 17:21:25 on Jan 23,2023, Elapsed time: 0:41:12
+# Errors: 8, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:21:25 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: RF_tb.sv(41): (vopt-2123) Missing argument for format specification '%b'.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./RF.do PAUSED at line 33
+do RF.do
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:22:47 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:22:47 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:21:25 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: RF_tb.sv(41): (vopt-2123) Missing argument for format specification '%b'.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=4, Warnings=0.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./RF.do PAUSED at line 33
+do RF.do
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:28:52 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:28:52 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:21:25 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: RF_tb.sv(41): (vopt-2123) Missing argument for format specification '%d'.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=6, Warnings=0.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./RF.do PAUSED at line 33
+do FSM.do
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:29:49 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 17:29:49 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 17:21:25 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:29:59 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:29:59 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:30:02 on Jan 23,2023, Elapsed time: 0:08:37
+# Errors: 6, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:30:02 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: RF_tb.sv(41): (vopt-2123) Missing argument for format specification '%d'.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./RF.do PAUSED at line 33
+do FSM.do
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:30:43 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 17:30:43 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 17:30:02 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:30:54 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:30:54 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:30:56 on Jan 23,2023, Elapsed time: 0:00:54
+# Errors: 2, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:30:56 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 8, found 7.
+#    Time: 0 ns  Iteration: 0  Instance: /RF/dut File: RF_tb.sv Line: 21
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'wa3'. The port definition is at: regfile.sv(4).
+#    Time: 0 ns  Iteration: 0  Instance: /RF/dut File: RF_tb.sv Line: 21
+# ** Warning: (vsim-3722) RF_tb.sv(21): [TFMPC] - Missing connection for port 'rd2'.
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:34:28 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:34:28 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:34:31 on Jan 23,2023, Elapsed time: 0:03:35
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:34:31 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 8, found 7.
+#    Time: 0 ns  Iteration: 0  Instance: /RF/dut File: RF_tb.sv Line: 21
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'wa3'. The port definition is at: regfile.sv(4).
+#    Time: 0 ns  Iteration: 0  Instance: /RF/dut File: RF_tb.sv Line: 21
+# ** Warning: (vsim-3722) RF_tb.sv(21): [TFMPC] - Missing connection for port 'rd2'.
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:36:14 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:36:14 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:36:16 on Jan 23,2023, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:36:16 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 8, found 7.
+#    Time: 0 ns  Iteration: 0  Instance: /RF/dut File: RF_tb.sv Line: 21
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'wa3'. The port definition is at: regfile.sv(4).
+#    Time: 0 ns  Iteration: 0  Instance: /RF/dut File: RF_tb.sv Line: 21
+# ** Warning: (vsim-3722) RF_tb.sv(21): [TFMPC] - Missing connection for port 'rd2'.
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:39:30 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:39:30 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:39:32 on Jan 23,2023, Elapsed time: 0:03:16
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:39:32 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:40:22 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:40:23 on Jan 23,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 17:40:25 on Jan 23,2023, Elapsed time: 0:00:53
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:40:25 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error: RF_tb.sv(41): (vopt-2123) Missing argument for format specification '%b'.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./RF.do PAUSED at line 33
+do FSM.do
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:41:20 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 17:41:20 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 17:40:25 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:41:32 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:41:32 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:41:34 on Jan 23,2023, Elapsed time: 0:01:09
+# Errors: 2, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:41:34 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:42:58 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:42:58 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:43:00 on Jan 23,2023, Elapsed time: 0:01:26
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:43:00 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# Causality operation skipped due to absence of debug database file
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:46:12 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:46:12 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:46:15 on Jan 23,2023, Elapsed time: 0:03:15
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:46:15 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:47:32 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:47:32 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:47:34 on Jan 23,2023, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:47:34 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:48:05 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:48:05 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:48:07 on Jan 23,2023, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:48:07 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:52:43 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:52:43 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:52:46 on Jan 23,2023, Elapsed time: 0:04:39
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:52:46 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:54:48 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:54:49 on Jan 23,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 17:54:51 on Jan 23,2023, Elapsed time: 0:02:05
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:54:51 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:56:17 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:56:17 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:56:19 on Jan 23,2023, Elapsed time: 0:01:28
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:56:19 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 17:58:28 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 17:58:29 on Jan 23,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 17:58:31 on Jan 23,2023, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 17:58:31 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do FSM.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:03:12 on Jan 23,2023
+# vlog -reportprogress 300 FSM.sv FSM_tb.sv 
+# -- Compiling module FSM
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 18:03:12 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:03:16 on Jan 23,2023, Elapsed time: 0:04:45
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 18:03:16 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.FSM(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:03:28 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 18:03:28 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:03:32 on Jan 23,2023, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 18:03:32 on Jan 23,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** UI-Msg: (vish-4014) No objects found matching '/RF/dut/write_enable/dp/*'.
+# Error in macro ./RF.do line 45
+# ** UI-Msg: (vish-4014) No objects found matching '/RF/dut/write_enable/dp/*'.
+#     while executing
+# "add wave -noupdate -divider -height 32 "Write Enable""
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:04:54 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 18:04:55 on Jan 23,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 18:04:58 on Jan 23,2023, Elapsed time: 0:01:26
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 18:04:58 on Jan 23,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** UI-Msg: (vish-4014) No objects found matching '/RF/dut/write_enable3/*'.
+# Error in macro ./RF.do line 45
+# ** UI-Msg: (vish-4014) No objects found matching '/RF/dut/write_enable3/*'.
+#     while executing
+# "add wave -noupdate -divider -height 32 "Write Enable""
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:06:06 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 18:06:07 on Jan 23,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 18:06:10 on Jan 23,2023, Elapsed time: 0:01:12
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 18:06:10 on Jan 23,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** UI-Msg: (vish-4014) No objects found matching '/RF/dut/write_enable3'.
+# Error in macro ./RF.do line 45
+# ** UI-Msg: (vish-4014) No objects found matching '/RF/dut/write_enable3'.
+#     while executing
+# "add wave -noupdate -divider -height 32 "Write Enable""
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:07:09 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 18:07:09 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:07:12 on Jan 23,2023, Elapsed time: 0:01:02
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 18:07:12 on Jan 23,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** UI-Msg: (vish-4014) No objects found matching '/RF_tb/dut/write_enable3'.
+# Error in macro ./RF.do line 45
+# ** UI-Msg: (vish-4014) No objects found matching '/RF_tb/dut/write_enable3'.
+#     while executing
+# "add wave -noupdate -divider -height 32 "Write Enable""
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:08:04 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 18:08:04 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:08:07 on Jan 23,2023, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 18:08:07 on Jan 23,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:09:55 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 18:09:55 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:09:59 on Jan 23,2023, Elapsed time: 0:01:52
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 18:09:59 on Jan 23,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:12:54 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 18:12:54 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:12:57 on Jan 23,2023, Elapsed time: 0:02:58
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 18:12:58 on Jan 23,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do RF.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is cocon@LAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:14:50 on Jan 23,2023
+# vlog -reportprogress 300 regfile.sv RF_tb.sv 
+# -- Compiling module regfile
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# End time: 18:14:50 on Jan 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:14:53 on Jan 23,2023, Elapsed time: 0:01:55
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.RF 
+# Start time: 18:14:53 on Jan 23,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.RF(fast)
+# Loading work.regfile(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
