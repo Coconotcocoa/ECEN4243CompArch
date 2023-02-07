@@ -160,6 +160,7 @@ int LBU (int Rd, int Rs1, int Imm, int Funct3) {
   return 0;
 
 }
+
 int LHU (int Rd, int Rs1, int Imm, int Funct3) { 
 
   int cur = 0;
@@ -176,6 +177,7 @@ int SLLI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
   NEXT_STATE.REGS[Rd] = cur;
 
 }
+
 int SLTI (int Rd, int Rs1, int Imm, int Funct3) { 
 
   int cur = 0; 
@@ -183,6 +185,7 @@ int SLTI (int Rd, int Rs1, int Imm, int Funct3) {
   NEXT_STATE.REGS[Rd] = cur;
 
 }
+
 int SLTIU (int Rd, int Rs1, int Imm, int Funct3) {
 
   int cur = 0; 
@@ -190,6 +193,7 @@ int SLTIU (int Rd, int Rs1, int Imm, int Funct3) {
   NEXT_STATE.REGS[Rd] = cur;
 
 }
+
 int XORI (int Rd, int Rs1, int Imm, int Funct3) { 
 
   int cur = 0;
@@ -216,6 +220,7 @@ int SRAI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
   return 0;
 
 }
+
 int ORI (int Rd, int Rs1, int Imm, int Funct3) {
 
   int cur = 0;
@@ -224,6 +229,7 @@ int ORI (int Rd, int Rs1, int Imm, int Funct3) {
   return 0;
 
 }
+
 int ANDI (int Rd, int Rs1, int Imm, int Funct3) {
 
   int cur = 0;
@@ -315,7 +321,6 @@ int LUI (int Rd, int Imm) {
 }
 
 // S Instruction
-/* Fix */
 int SB (int Rs1, int Rs2, int Imm, int Funct3) {
 
   mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)), (CURRENT_STATE.REGS[Rs2] >> 24));
@@ -323,24 +328,18 @@ int SB (int Rs1, int Rs2, int Imm, int Funct3) {
 
 
 }
-/* Fix */
 int SH (int Rs1, int Rs2, int Imm, int Funct3) { 
 
   mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)), (CURRENT_STATE.REGS[Rs2] >> 16));
   return 0;
 
 }
-/* Fix */
 int SW (int Rs1, int Rs2, int Imm, int Funct3) {
 
   mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)), CURRENT_STATE.REGS[Rs2]);
   return 0;
 
 }
-
-
-
-
 
 // I instruction
 int JALR (int Rd, int Rs1, int Imm, int Funct3) { 
@@ -365,7 +364,7 @@ return 0;
 
 
 
-int ECALL ()
+int ECALL (char* i_)
 {
   return 0;
 }
