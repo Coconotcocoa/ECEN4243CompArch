@@ -318,9 +318,7 @@ int LUI (int Rd, int Imm) {
 /* Fix */
 int SB (int Rs1, int Rs2, int Imm, int Funct3) {
 
-  int cur = 0;
-  cur = mem_write_32(((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)) >> 24), (CURRENT_STATE.REGS[Rs2] >> 24));
-  NEXT_STATE.REGS[Rd] = cur;
+  mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)), (CURRENT_STATE.REGS[Rs2] >> 24));
   return 0;
 
 
@@ -328,18 +326,14 @@ int SB (int Rs1, int Rs2, int Imm, int Funct3) {
 /* Fix */
 int SH (int Rs1, int Rs2, int Imm, int Funct3) { 
 
-  int cur = 0;
-  cur = mem_write_32(((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)) >> 16), (CURRENT_STATE.REGS[Rs2] >> 16));
-  NEXT_STATE.REGS[Rd] = cur;
+  mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)), (CURRENT_STATE.REGS[Rs2] >> 16));
   return 0;
 
 }
 /* Fix */
 int SW (int Rs1, int Rs2, int Imm, int Funct3) {
 
-  int cur = 0;
-  cur = mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)), CURRENT_STATE.REGS[Rs2]);
-  NEXT_STATE.REGS[Rd] = cur;
+  mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)), CURRENT_STATE.REGS[Rs2]);
   return 0;
 
 }
@@ -354,13 +348,13 @@ int JALR (int Rd, int Rs1, int Imm, int Funct3) {
 int cur = 0; 
 cur = (CURRENT_STATE.PC + 4);
 NEXT_STATE.REGS[Rd] = cur;
-NEXT_STATE.PC = CURRENT_STATE[Rs1] + Imm; 
+NEXT_STATE.PC = CURRENT_STATE.REGS[Rs1] + Imm; 
 return 0;
 
 }
 
 // J instruction
-int JAL (int Rd, int Imm, int Funct3) { 
+int JAL (int Rd, int Imm) { 
 
 int cur = 0; 
 cur = (CURRENT_STATE.PC + 4);
@@ -371,7 +365,7 @@ return 0;
 
 
 
-int ECALL (int Funct3, int Funct7)
+int ECALL ()
 {
   return 0;
 }
