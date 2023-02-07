@@ -169,11 +169,10 @@ int LHU (int Rd, int Rs1, int Imm, int Funct3) {
 
 }
 
-int SLLI (int Rd, int Rs1, int Imm, int Funct3, int Funct7) {
+int SLLI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
 
   int cur = 0; 
-  Imm = Imm >> 7;
-  cur = CURRENT_STATE.REGS[Rs1] << Imm;
+  cur = CURRENT_STATE.REGS[Rs1] << ZImm;
   NEXT_STATE.REGS[Rd] = cur;
 
 }
@@ -200,21 +199,19 @@ int XORI (int Rd, int Rs1, int Imm, int Funct3) {
 
 }
 
-int SRLI (int Rd, int Rs1, int Imm, int Funct3, int Funct7) {
+int SRLI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
 
   int cur = 0;
-  Imm = Imm >> 7;
-  cur = CURRENT_STATE.REGS[Rs1] >> Imm;
+  cur = CURRENT_STATE.REGS[Rs1] >> ZImm;
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
 }
 
-int SRAI (int Rd, int Rs1, int Imm, int Funct3, int Funct7) {
+int SRAI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
 
   int cur = 0;
-  Imm = Imm >> 7;
-  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> Imm, 27);
+  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> ZImm, 27);
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
