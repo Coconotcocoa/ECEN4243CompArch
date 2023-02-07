@@ -71,7 +71,7 @@ uint32_t mem_read_32(uint32_t address)
   int i;
   for (i = 0; i < MEM_NREGIONS; i++) {
     if (address >= MEM_REGIONS[i].start &&
-	address < (MEM_REGIONS[i].start + MEM_REGIONS[i].size)) {
+	      address < (MEM_REGIONS[i].start + MEM_REGIONS[i].size)) {
       uint32_t offset = address - MEM_REGIONS[i].start;
 
       return
@@ -97,7 +97,7 @@ void mem_write_32(uint32_t address, uint32_t value)
   int i;
   for (i = 0; i < MEM_NREGIONS; i++) {
     if (address >= MEM_REGIONS[i].start &&
-	address < (MEM_REGIONS[i].start + MEM_REGIONS[i].size)) {
+	      address < (MEM_REGIONS[i].start + MEM_REGIONS[i].size)) {
       uint32_t offset = address - MEM_REGIONS[i].start;
 
       MEM_REGIONS[i].mem[offset+3] = (value >> 24) & 0xFF;

@@ -130,7 +130,7 @@ int ADDI (int Rd, int Rs1, int Imm, int Funct3) {
 int LB (int Rd, int Rs1, int Imm, int Funct3) {
 
   int cur = 0;
-  cur = SIGNEXT(mem_read_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,12)) >> 24), 8);
+  cur = SIGNEXT(mem_read_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,12)) >> 24));
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
@@ -138,7 +138,7 @@ int LB (int Rd, int Rs1, int Imm, int Funct3) {
 int LH (int Rd, int Rs1, int Imm, int Funct3) {
 
   int cur = 0;
-  cur = SIGNEXT(mem_read_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,12)) >> 16), 16);
+  cur = SIGNEXT(mem_read_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,12)) >> 16));
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
