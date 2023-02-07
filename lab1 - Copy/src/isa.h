@@ -49,8 +49,10 @@ int SUB (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 int SLL (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 
   int cur = 0; 
-  cur = CURRENT_STATE.REGS[Rs1] << CURRENT_STATE.REGS[Rs2];
+  cur = CURRENT_STATE.REGS[Rs1] << (CURRENT_STATE.REGS[Rs2] >> 27);
   NEXT_STATE.REGS[Rd] = cur;
+  return 0;
+
 
 }
 int SLT (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
@@ -58,6 +60,7 @@ int SLT (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
   int cur = 0; 
   cur = (CURRENT_STATE.REGS[Rs1] < CURRENT_STATE.REGS[Rs2]);
   NEXT_STATE.REGS[Rd] = cur;
+  return 0;
 
 }
 int SLTU (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
@@ -65,6 +68,8 @@ int SLTU (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
   int cur = 0; 
   cur = ZEROEXT(CURRENT_STATE.REGS[Rs1] < CURRENT_STATE.REGS[Rs2]);
   NEXT_STATE.REGS[Rd] = cur;
+  return 0;
+
 
 }
 int XOR (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
@@ -72,20 +77,25 @@ int XOR (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] ^ CURRENT_STATE.REGS[Rs2];
   NEXT_STATE.REGS[Rd] = cur;
+  return 0;
 
 }
 int SRL (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 
   int cur = 0; 
-  cur = CURRENT_STATE.REGS[Rs1] >> CURRENT_STATE.REGS[Rs2];
+  cur = CURRENT_STATE.REGS[Rs1] >> (CURRENT_STATE.REGS[Rs2] >> 27);
   NEXT_STATE.REGS[Rd] = cur;
+  return 0;
+
 
 }
 int SRA (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 
   int cur = 0; 
-  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> CURRENT_STATE.REGS[Rs2], 5);
+  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> (CURRENT_STATE.REGS[Rs2] >> 27), 27);
   NEXT_STATE.REGS[Rd] = cur;
+  return 0;
+
 
 }
 int OR (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
@@ -93,6 +103,8 @@ int OR (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] | CURRENT_STATE.REGS[Rs2];
   NEXT_STATE.REGS[Rd] = cur;
+  return 0;
+
 
 }
 int AND (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
@@ -100,6 +112,8 @@ int AND (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] & CURRENT_STATE.REGS[Rs2];
   NEXT_STATE.REGS[Rd] = cur;
+  return 0;
+
 
 }
 
@@ -116,7 +130,7 @@ int ADDI (int Rd, int Rs1, int Imm, int Funct3) {
 int LB (int Rd, int Rs1, int Imm, int Funct3) {
 
   int cur = 0;
-  cur = SIGNEXT(mem_read_32(CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,12)),8);
+  cur = SIGNEXT(mem_read_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,12)) >> 24), 8);
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
@@ -124,7 +138,7 @@ int LB (int Rd, int Rs1, int Imm, int Funct3) {
 int LH (int Rd, int Rs1, int Imm, int Funct3) {
 
   int cur = 0;
-  cur = SIGNEXT(mem_read_32(CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,12)), 16);
+  cur = SIGNEXT(mem_read_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,12)) >> 16), 16);
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
@@ -137,10 +151,11 @@ int LW (int Rd, int Rs1, int Imm, int Funct3) {
   return 0;
 
 }
+
 int LBU (int Rd, int Rs1, int Imm, int Funct3) {
 
   int cur = 0;
-  cur = mem_read_32(ZEROEXT(CURRENT_STATE.REGS[Rs1] + ZEROEXT(Imm)),8);
+  cur = mem_read_32(ZEROEXT((CURRENT_STATE.REGS[Rs1] + ZEROEXT(Imm)) >> 24));
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
@@ -148,15 +163,16 @@ int LBU (int Rd, int Rs1, int Imm, int Funct3) {
 int LHU (int Rd, int Rs1, int Imm, int Funct3) { 
 
   int cur = 0;
-  cur = mem_read_32(ZEROEXT(CURRENT_STATE.REGS[Rs1] + ZEROEXT(Imm)), 16);
+  cur = mem_read_32(ZEROEXT((CURRENT_STATE.REGS[Rs1] + ZEROEXT(Imm)) >> 16));
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
 }
-/* Fix */
+
 int SLLI (int Rd, int Rs1, int Imm, int Funct3, int Funct7) {
 
   int cur = 0; 
+  Imm = Imm >> 7;
   cur = CURRENT_STATE.REGS[Rs1] << Imm;
   NEXT_STATE.REGS[Rd] = cur;
 
@@ -171,32 +187,34 @@ int SLTI (int Rd, int Rs1, int Imm, int Funct3) {
 int SLTIU (int Rd, int Rs1, int Imm, int Funct3) {
 
   int cur = 0; 
-  cur = CURRENT_STATE.REGS[Rs1] < ZEROEXT(Imm,12);
+  cur = CURRENT_STATE.REGS[Rs1] < ZEROEXT(Imm);
   NEXT_STATE.REGS[Rd] = cur;
 
 }
 int XORI (int Rd, int Rs1, int Imm, int Funct3) { 
 
   int cur = 0;
-  cur = CURRENT_STATE.REGS[Rs1] ^ SIGNEXT(Imm,12);
+  cur = CURRENT_STATE.REGS[Rs1] ^ SIGNEXT(Imm, 12);
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
 }
-/* Fix */
+
 int SRLI (int Rd, int Rs1, int Imm, int Funct3, int Funct7) {
 
   int cur = 0;
+  Imm = Imm >> 7;
   cur = CURRENT_STATE.REGS[Rs1] >> Imm;
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
 }
-/* Fix */
+
 int SRAI (int Rd, int Rs1, int Imm, int Funct3, int Funct7) {
 
   int cur = 0;
-  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> Imm, 5);
+  Imm = Imm >> 7;
+  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> Imm, 27);
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
@@ -282,7 +300,6 @@ int BGEU (int Rs1, int Rs2, int Imm, int Funct3) {
 
 
 // U Instruction
-/* Fix */
 int AUIPC (int Rd, int Imm) {
 
   int cur = 0;
@@ -305,7 +322,7 @@ int LUI (int Rd, int Imm) {
 int SB (int Rs1, int Rs2, int Imm, int Funct3) {
 
   int cur = 0;
-  cur = mem_write_32(CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12), CURRENT_STATE.REGS[Rs2]);
+  cur = mem_write_32(((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)) >> 24), (CURRENT_STATE.REGS[Rs2] >> 24));
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
@@ -314,17 +331,19 @@ int SB (int Rs1, int Rs2, int Imm, int Funct3) {
 /* Fix */
 int SH (int Rs1, int Rs2, int Imm, int Funct3) { 
 
-int cur = 0; 
-cur = mem_write_32(CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12), CURRENT_STATE.REGS[Rs2])
-NEXT_STATE.REGS[Rd] = cur;
+  int cur = 0;
+  cur = mem_write_32(((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)) >> 16), (CURRENT_STATE.REGS[Rs2] >> 16));
+  NEXT_STATE.REGS[Rd] = cur;
+  return 0;
 
 }
 /* Fix */
 int SW (int Rs1, int Rs2, int Imm, int Funct3) {
 
-int cur = 0; 
-cur = mem_write_32(CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12), CURRENT_STATE.REGS[Rs2])
-NEXT_STATE.REGS[Rd] = cur;
+  int cur = 0;
+  cur = mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm, 12)), CURRENT_STATE.REGS[Rs2]);
+  NEXT_STATE.REGS[Rd] = cur;
+  return 0;
 
 }
 
@@ -333,15 +352,31 @@ NEXT_STATE.REGS[Rd] = cur;
 
 
 // I instruction
-int JALR (int Rd, int Rs1, int Imm) { 
+int JALR (int Rd, int Rs1, int Imm, int Funct3) { 
 
-
+int cur = 0; 
+cur = (CURRENT_STATE.PC + 4);
+NEXT_STATE.REGS[Rd] = cur;
+NEXT_STATE.PC = CURRENT_STATE[Rs1] + Imm; 
+return 0;
 
 }
 
 // J instruction
-int JAL (char* i_);
+int JAL (int Rd, int Imm, int Funct3) { 
 
-int ECALL (char* i_){return 0;}
+int cur = 0; 
+cur = (CURRENT_STATE.PC + 4);
+NEXT_STATE.PC = CURRENT_STATE.PC + Imm; 
+return 0;
+
+}
+
+
+
+int ECALL (int Funct3, int Funct7)
+{
+  return 0;
+}
 
 #endif
