@@ -88,7 +88,7 @@ int r_process(char* i_) {
   int Rd = bchar_to_int(rd);
   int Funct3 = bchar_to_int(funct3);
   int Funct7 = bchar_to_int(funct7);
-  printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Rd = %d\n Funct3 = %d\n Funct7 = %d\n\n",
+  printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Rd = %d\n Funct3 = %s\n Funct7 = %s\n\n",
 	  d_opcode, Rs1, Rs2, Rd, Funct3, Funct7);
   printf("\n");
 
@@ -185,11 +185,12 @@ int i_process(char* i_) {
   int Rd = bchar_to_int(rd);
   int Funct3 = bchar_to_int(funct3);
   int Imm = bchar_to_int(imm);
-  printf ("Opcode = %s\n Rs1 = %d\n Imm = %d\n Rd = %d\n Funct3 = %d\n\n",
+  printf ("Opcode = %s\n Rs1 = %d\n Imm = %d\n Rd = %d\n Funct3 = %s\n\n",
 	  d_opcode, Rs1, Imm, Rd, Funct3);
   printf("\n");
 
   /* Add other imm instructions here */ 
+  
   if(!strcmp(d_opcode,"0000011") && !strcmp(funct3, "000")) {
     printf("--- This is an LB instruction. \n");
     LB(Rd, Rs1, Imm, Funct3);
@@ -374,7 +375,7 @@ int b_process(char* i_) {
   int Rs2 = bchar_to_int(rs2);  
   int Funct3 = bchar_to_int(funct3);
   int Imm = bchar_to_int(imm);
-  printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Imm = %d\n Funct3 = %d\n\n",
+  printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Imm = %d\n Funct3 = %s\n\n",
 	  d_opcode, Rs1, Rs2, Imm, Funct3);
   printf("\n");    
 
@@ -462,7 +463,7 @@ int s_process(char* i_) {
   int Rs2 = bchar_to_int(rs2);  
   int Funct3 = bchar_to_int(funct3);
   int Imm = bchar_to_int(imm);
-  printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Imm = %d\n Funct3 = %d\n\n",
+  printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Imm = %d\n Funct3 = %s\n\n",
 	  d_opcode, Rs1, Rs2, Imm, Funct3);
   printf("\n");  
   /* Add store instructions here */ 
