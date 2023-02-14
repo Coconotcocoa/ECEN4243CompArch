@@ -240,12 +240,6 @@ int i_process(char* i_) {
   }	  	 		 
 
   
-  if(!strcmp(d_opcode,"0000011") && !strcmp(funct3, "010")) {
-    printf("--- This is an LW instruction. \n");
-    LW(Rd, Rs1, Imm, Funct3);
-    return 0;
-  }	  	
-
 
 
   if(!strcmp(d_opcode,"0010011") && !strcmp(funct3, "110")) {
@@ -572,7 +566,7 @@ int u_process(char* i_) {
   printf("\n");
   /* Add U instructions here */ 
 
-  if(!strcmp(d_opcode, "0110111")) {
+  if(!strcmp(d_opcode, "0010111")) {
     printf("--- This is a AUIPC instruction. \n");
     AUIPC(Rd, Imm);
     return 0;
