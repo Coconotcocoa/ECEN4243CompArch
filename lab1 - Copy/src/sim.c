@@ -66,29 +66,42 @@ int r_process(char* i_) {
   d_opcode[5] = i_[31-1]; 
   d_opcode[6] = i_[31-0];
   d_opcode[7] = '\0';
+  
+  char funct3[4];
+  funct3[0] = i_[31-14];
+  funct3[1] = i_[31-13];
+  funct3[2] = i_[31-12];
+  funct3[3] = '\0';
+
+  char funct7[8];
+  funct7[0] = i_[31-31];
+  funct7[1] = i_[31-30];
+  funct7[2] = i_[31-29];
+  funct7[3] = i_[31-28];
+  funct7[4] = i_[31-27];
+  funct7[5] = i_[31-26];
+  funct7[6] = i_[31-25]; 
+  funct7[7] = '\0';
+
+
   char rs1[6]; rs1[5] = '\0';		   
   char rs2[6]; rs2[5] = '\0';
   char rd[6]; rd[5] = '\0';
-  char funct3[4]; funct3[3] = '\0';
-  char funct7[8]; funct3[7] = '\0';
+  
+  
   for(int i = 0; i < 5; i++) {
     rs1[i] = i_[31-19+i];
     rs2[i] = i_[31-24+i];            
     rd[i] = i_[31-11+i];
   }
-  for(int i = 0; i < 3; i++) {
-    funct3[i] = i_[31-14+i];
-  }
-  for(int i = 0; i < 7; i++) {
-    funct7[i] = i_[31-31+i];
-  }
+
 
   int Rs1 = bchar_to_int(rs1);
   int Rs2 = bchar_to_int(rs2);		   
   int Rd = bchar_to_int(rd);
   int Funct3 = bchar_to_int(funct3);
   int Funct7 = bchar_to_int(funct7);
-  printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Rd = %d\n Funct3 = %s\n Funct7 = %s\n\n",
+  printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Rd = %d\n Funct3 = %s\n Funct7 = %d\n\n",
 	  d_opcode, Rs1, Rs2, Rd, Funct3, Funct7);
   printf("\n");
 
@@ -167,9 +180,16 @@ int i_process(char* i_) {
   d_opcode[5] = i_[31-1]; 
   d_opcode[6] = i_[31-0]; 
   d_opcode[7] = '\0';
+
+  char funct3[4];
+  funct3[0] = i_[31-14];
+  funct3[1] = i_[31-13];
+  funct3[2] = i_[31-12];
+  funct3[3] = '\0';
+
+
   char rs1[6]; rs1[5] = '\0';		   
   char rd[6]; rd[5] = '\0';
-  char funct3[4]; funct3[3] = '\0';
   char imm[13]; imm[12] = '\0';
   for(int i = 0; i < 5; i++) {
     rs1[i] = i_[31-19+i];
@@ -178,15 +198,12 @@ int i_process(char* i_) {
   for(int i = 0; i < 12; i++) {
     imm[i] = i_[31-31+i];
   }
-  for(int i = 0; i < 3; i++) {
-    funct3[i] = i_[31-14+i];
-  }
+
   int Rs1 = bchar_to_int(rs1);
   int Rd = bchar_to_int(rd);
-  int Funct3 = bchar_to_int(funct3);
   int Imm = bchar_to_int(imm);
   printf ("Opcode = %s\n Rs1 = %d\n Imm = %d\n Rd = %d\n Funct3 = %s\n\n",
-	  d_opcode, Rs1, Imm, Rd, Funct3);
+	  d_opcode, Rs1, Imm, Rd, funct3);
   printf("\n");
 
   /* Add other imm instructions here */ 
@@ -282,10 +299,25 @@ int i2_process(char* i_) {
   d_opcode[5] = i_[31-1]; 
   d_opcode[6] = i_[31-0]; 
   d_opcode[7] = '\0';
+
+  char funct3[4];
+  funct3[0] = i_[31-14];
+  funct3[1] = i_[31-13];
+  funct3[2] = i_[31-12];
+  funct3[3] = '\0';
+
+  char funct7[8];
+  funct7[0] = i_[31-31];
+  funct7[1] = i_[31-30];
+  funct7[2] = i_[31-29];
+  funct7[3] = i_[31-28];
+  funct7[4] = i_[31-27];
+  funct7[5] = i_[31-26];
+  funct7[6] = i_[31-25]; 
+  funct7[7] = '\0';
+
   char rs1[6]; rs1[5] = '\0';		   
   char rd[6]; rd[5] = '\0';
-  char funct3[4]; funct3[3] = '\0';
-  char funct7[8]; funct7[7] = '\0';
   char zimm[6]; zimm[5] = '\0';
   for(int i = 0; i < 5; i++) {
     rs1[i] = i_[31-19+i];
@@ -296,21 +328,11 @@ int i2_process(char* i_) {
     zimm[i] = i_[31-26+i];
   }
 
-  for(int i = 0; i < 8; i++) {
-    funct7[i] = i_[31-31+i];
-  }
-
-  for(int i = 0; i < 3; i++) {
-    funct3[i] = i_[31-14+i];
-  }
-
   int Rs1 = bchar_to_int(rs1);
   int Rd = bchar_to_int(rd);
-  int Funct3 = bchar_to_int(funct3);
-  int Funct7 = bchar_to_int(funct7);
   int ZImm = bchar_to_int(zimm);
   printf ("Opcode = %s\n Rs1 = %d\n ZImm = %d\n Rd = %d\n Funct3 = %d\n Funct7 = %d\n\n",
-	  d_opcode, Rs1, ZImm, Rd, Funct3, Funct7);
+	  d_opcode, Rs1, ZImm, Rd, funct3, funct7);
   printf("\n");
 
   if(!strcmp(d_opcode,"0010011") && !strcmp(funct3, "001") && !strcmp(funct7, "0000000")) {
@@ -345,9 +367,15 @@ int b_process(char* i_) {
   d_opcode[5] = i_[31-1]; 
   d_opcode[6] = i_[31-0]; 
   d_opcode[7] = '\0';
+
+  char funct3[4];
+  funct3[0] = i_[31-14];
+  funct3[1] = i_[31-13];
+  funct3[2] = i_[31-12];
+  funct3[3] = '\0';
+
   char rs1[6]; rs1[5] = '\0';
   char rs2[6]; rs2[5] = '\0';		     
-  char funct3[4]; funct3[3] = '\0';
   char imm[13]; 
   for(int i = 0; i < 5; i++) {
     rs1[i] = i_[31-19+i];
@@ -368,15 +396,13 @@ int b_process(char* i_) {
   imm[11] = i_[31-8];
   imm[12] = '\0';  
 
-  for(int i = 0; i < 3; i++) {
-    funct3[i] = i_[31-14+i];
-  }
+
   int Rs1 = bchar_to_int(rs1);
   int Rs2 = bchar_to_int(rs2);  
-  int Funct3 = bchar_to_int(funct3);
+
   int Imm = bchar_to_int(imm);
   printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Imm = %d\n Funct3 = %s\n\n",
-	  d_opcode, Rs1, Rs2, Imm, Funct3);
+	  d_opcode, Rs1, Rs2, Imm, funct3);
   printf("\n");    
 
   /* Add branch instructions here */
@@ -433,9 +459,15 @@ int s_process(char* i_) {
   d_opcode[5] = i_[31-1]; 
   d_opcode[6] = i_[31-0];
   d_opcode[7] = '\0';
+
+  char funct3[4];
+  funct3[0] = i_[31-14];
+  funct3[1] = i_[31-13];
+  funct3[2] = i_[31-12];
+  funct3[3] = '\0';
+
   char rs1[6]; rs1[5] = '\0';
   char rs2[6]; rs2[5] = '\0';
-  char funct3[4]; funct3[3] = '\0';
   char imm[13];
   for(int i = 0; i < 5; i++) {
     rs1[i] = i_[31-19+i];
@@ -456,15 +488,12 @@ int s_process(char* i_) {
   imm[10] = i_[31-8];
   imm[11] = i_[31-7];
   imm[12] = '\0';
-  for(int i = 0; i < 3; i++) {
-    funct3[i] = i_[31-14+i];
-  }
+
   int Rs1 = bchar_to_int(rs1);
   int Rs2 = bchar_to_int(rs2);  
-  int Funct3 = bchar_to_int(funct3);
   int Imm = bchar_to_int(imm);
   printf ("Opcode = %s\n Rs1 = %d\n Rs2 = %d\n Imm = %d\n Funct3 = %s\n\n",
-	  d_opcode, Rs1, Rs2, Imm, Funct3);
+	  d_opcode, Rs1, Rs2, Imm, funct3);
   printf("\n");  
   /* Add store instructions here */ 
   if(!strcmp(d_opcode, "0100011") && !strcmp(funct3, "000")) {
