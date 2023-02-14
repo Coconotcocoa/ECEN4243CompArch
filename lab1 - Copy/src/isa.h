@@ -30,7 +30,7 @@
 
 
 /* R Instructions */
-int ADD (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
+int ADD (int Rd, int Rs1, int Rs2) {
 
   int cur = 0;
   cur = CURRENT_STATE.REGS[Rs1] + CURRENT_STATE.REGS[Rs2];
@@ -38,7 +38,7 @@ int ADD (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
   return 0;
 
 }
-int SUB (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) { 
+int SUB (int Rd, int Rs1, int Rs2) { 
   
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] - CURRENT_STATE.REGS[Rs2];
@@ -46,7 +46,7 @@ int SUB (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
   return 0;
 
 }
-int SLL (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
+int SLL (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] << (CURRENT_STATE.REGS[Rs2] >> 27);
@@ -55,7 +55,7 @@ int SLL (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 
 
 }
-int SLT (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
+int SLT (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
   cur = (CURRENT_STATE.REGS[Rs1] < CURRENT_STATE.REGS[Rs2]);
@@ -63,7 +63,7 @@ int SLT (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
   return 0;
 
 }
-int SLTU (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
+int SLTU (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
   cur = ZEROEXT(CURRENT_STATE.REGS[Rs1] < CURRENT_STATE.REGS[Rs2]);
@@ -72,7 +72,7 @@ int SLTU (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 
 
 }
-int XOR (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
+int XOR (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] ^ CURRENT_STATE.REGS[Rs2];
@@ -80,7 +80,7 @@ int XOR (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
   return 0;
 
 }
-int SRL (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
+int SRL (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] >> (CURRENT_STATE.REGS[Rs2] >> 27);
@@ -89,7 +89,7 @@ int SRL (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 
 
 }
-int SRA (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
+int SRA (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
   cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> (CURRENT_STATE.REGS[Rs2] >> 27), 27);
@@ -98,7 +98,7 @@ int SRA (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 
 
 }
-int OR (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
+int OR (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] | CURRENT_STATE.REGS[Rs2];
@@ -107,7 +107,7 @@ int OR (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 
 
 }
-int AND (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
+int AND (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] & CURRENT_STATE.REGS[Rs2];
@@ -119,15 +119,15 @@ int AND (int Rd, int Rs1, int Rs2, int Funct3, int Funct7) {
 
 
 /* I Instructions */
-int ADDI (int Rd, int Rs1, int Imm, int Funct3) {
+int ADDI (int Rd, int Rs1, int Imm) {
 
   int cur = 0;
-  cur = CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,12);
+  cur = CURRENT_STATE.REGS[Rs1] + SIGNEXT(Imm,11);
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
 }
-int LB (int Rd, int Rs1, int Imm, int Funct3) {
+int LB (int Rd, int Rs1, int Imm) {
 
   int cur = 0;
   cur = SIGNEXT((mem_read_32(CURRENT_STATE.REGS[Rs1] + SIGNEXT((Imm % 4096),11)) >> 24), 7);
@@ -135,7 +135,7 @@ int LB (int Rd, int Rs1, int Imm, int Funct3) {
   return 0;
 
 }
-int LH (int Rd, int Rs1, int Imm, int Funct3) {
+int LH (int Rd, int Rs1, int Imm ) {
 
   int cur = 0;
   cur = SIGNEXT(mem_read_32(CURRENT_STATE.REGS[Rs1] + SIGNEXT((Imm % 4096),11) >> 16), 15);
@@ -143,7 +143,7 @@ int LH (int Rd, int Rs1, int Imm, int Funct3) {
   return 0;
 
 }
-int LW (int Rd, int Rs1, int Imm, int Funct3) {
+int LW (int Rd, int Rs1, int Imm ) {
 
   int cur = 0;
   cur = mem_read_32(CURRENT_STATE.REGS[Rs1] + SIGNEXT((Imm % 4096),11));
@@ -152,7 +152,7 @@ int LW (int Rd, int Rs1, int Imm, int Funct3) {
 
 }
 
-int LBU (int Rd, int Rs1, int Imm, int Funct3) {
+int LBU (int Rd, int Rs1, int Imm ) {
 
   int cur = 0;
   cur = ZEROEXT(mem_read_32(CURRENT_STATE.REGS[Rs1] + SIGNEXT((Imm % 4096),12)) >> 24);
@@ -161,7 +161,7 @@ int LBU (int Rd, int Rs1, int Imm, int Funct3) {
 
 }
 
-int LHU (int Rd, int Rs1, int Imm, int Funct3) { 
+int LHU (int Rd, int Rs1, int Imm ) { 
 
   int cur = 0;
   cur = ZEROEXT(mem_read_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT((Imm % 4096),12)))>> 16);
@@ -170,7 +170,7 @@ int LHU (int Rd, int Rs1, int Imm, int Funct3) {
 
 }
 
-int SLLI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
+int SLLI (int Rd, int Rs1, int ZImm  ) {
 
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] << ZImm;
@@ -178,7 +178,7 @@ int SLLI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
 
 }
 
-int SLTI (int Rd, int Rs1, int Imm, int Funct3) { 
+int SLTI (int Rd, int Rs1, int Imm ) { 
 
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] < SIGNEXT(Imm,11);
@@ -186,7 +186,7 @@ int SLTI (int Rd, int Rs1, int Imm, int Funct3) {
 
 }
 
-int SLTIU (int Rd, int Rs1, int Imm, int Funct3) {
+int SLTIU (int Rd, int Rs1, int Imm ) {
 
   int cur = 0; 
   cur = CURRENT_STATE.REGS[Rs1] < ZEROEXT(Imm);
@@ -194,7 +194,7 @@ int SLTIU (int Rd, int Rs1, int Imm, int Funct3) {
 
 }
 
-int XORI (int Rd, int Rs1, int Imm, int Funct3) { 
+int XORI (int Rd, int Rs1, int Imm ) { 
 
   int cur = 0;
   cur = CURRENT_STATE.REGS[Rs1] ^ SIGNEXT(Imm, 11);
@@ -203,7 +203,7 @@ int XORI (int Rd, int Rs1, int Imm, int Funct3) {
 
 }
 
-int SRLI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
+int SRLI (int Rd, int Rs1, int ZImm  ) {
 
   int cur = 0;
   cur = CURRENT_STATE.REGS[Rs1] >> ZImm;
@@ -212,7 +212,7 @@ int SRLI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
 
 }
 
-int SRAI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
+int SRAI (int Rd, int Rs1, int ZImm  ) {
 
   int cur = 0;
   cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> ZImm, 27);
@@ -221,7 +221,7 @@ int SRAI (int Rd, int Rs1, int ZImm, int Funct3, int Funct7) {
 
 }
 
-int ORI (int Rd, int Rs1, int Imm, int Funct3) {
+int ORI (int Rd, int Rs1, int Imm ) {
 
   int cur = 0;
   cur = CURRENT_STATE.REGS[Rs1] | Imm;
@@ -230,7 +230,7 @@ int ORI (int Rd, int Rs1, int Imm, int Funct3) {
 
 }
 
-int ANDI (int Rd, int Rs1, int Imm, int Funct3) {
+int ANDI (int Rd, int Rs1, int Imm ) {
 
   int cur = 0;
   cur = CURRENT_STATE.REGS[Rs1] & Imm;
@@ -241,7 +241,7 @@ int ANDI (int Rd, int Rs1, int Imm, int Funct3) {
 
 
 /* B Instructions */
-int BNE (int Rs1, int Rs2, int Imm, int Funct3) {
+int BNE (int Rs1, int Rs2, int Imm ) {
 
   int cur = 0;
   Imm = Imm << 1;
@@ -251,7 +251,7 @@ int BNE (int Rs1, int Rs2, int Imm, int Funct3) {
 
 }
 
-int BEQ (int Rs1, int Rs2, int Imm, int Funct3) {
+int BEQ (int Rs1, int Rs2, int Imm ) {
   
   int cur = 0;
   Imm = Imm << 1;
@@ -261,7 +261,7 @@ int BEQ (int Rs1, int Rs2, int Imm, int Funct3) {
 
 }
 
-int BLT (int Rs1, int Rs2, int Imm, int Funct3) {
+int BLT (int Rs1, int Rs2, int Imm ) {
 
   int cur = 0;
   Imm = Imm << 1;
@@ -271,7 +271,7 @@ int BLT (int Rs1, int Rs2, int Imm, int Funct3) {
 
 }
 
-int BGE (int Rs1, int Rs2, int Imm, int Funct3) {
+int BGE (int Rs1, int Rs2, int Imm ) {
 
   int cur = 0;
   Imm = Imm << 1;
@@ -281,7 +281,7 @@ int BGE (int Rs1, int Rs2, int Imm, int Funct3) {
 
 }
 
-int BLTU (int Rs1, int Rs2, int Imm, int Funct3) {
+int BLTU (int Rs1, int Rs2, int Imm ) {
 
   int cur = 0;
   Imm = Imm << 1;
@@ -291,7 +291,7 @@ int BLTU (int Rs1, int Rs2, int Imm, int Funct3) {
 
 }
 
-int BGEU (int Rs1, int Rs2, int Imm, int Funct3) {
+int BGEU (int Rs1, int Rs2, int Imm ) {
 
   int cur = 0;
   Imm = Imm << 1;
@@ -321,20 +321,20 @@ int LUI (int Rd, int Imm) {
 }
 
 // S Instruction
-int SB (int Rs1, int Rs2, int Imm, int Funct3) {
+int SB (int Rs1, int Rs2, int Imm ) {
 
   mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT((Imm % 4096), 11)), (CURRENT_STATE.REGS[Rs2] >> 24));
   return 0;
 
 
 }
-int SH (int Rs1, int Rs2, int Imm, int Funct3) { 
+int SH (int Rs1, int Rs2, int Imm ) { 
 
   mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT((Imm % 4096), 11)), (CURRENT_STATE.REGS[Rs2] >> 16));
   return 0;
 
 }
-int SW (int Rs1, int Rs2, int Imm, int Funct3) {
+int SW (int Rs1, int Rs2, int Imm ) {
 
   mem_write_32((CURRENT_STATE.REGS[Rs1] + SIGNEXT((Imm % 4096), 11)), CURRENT_STATE.REGS[Rs2]);
   return 0;
@@ -342,7 +342,7 @@ int SW (int Rs1, int Rs2, int Imm, int Funct3) {
 }
 
 // I instruction
-int JALR (int Rd, int Rs1, int Imm, int Funct3) { 
+int JALR (int Rd, int Rs1, int Imm ) { 
 
 int cur = 0; 
 cur = (CURRENT_STATE.PC + 4);
