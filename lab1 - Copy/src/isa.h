@@ -26,7 +26,7 @@
 // MACRO: Zero extend (e.g., 0x80_0000 -> 0x0080_0000)
 //
 #define ZEROEXT(v)  ((0x00000000) | (v))
-
+ 
 
 
 /* R Instructions */
@@ -49,7 +49,8 @@ int SUB (int Rd, int Rs1, int Rs2) {
 int SLL (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
-  cur = CURRENT_STATE.REGS[Rs1] << (CURRENT_STATE.REGS[Rs2] >> 27);
+  
+  cur = CURRENT_STATE.REGS[Rs1] << (CURRENT_STATE.REGS[Rs2]);
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
@@ -83,7 +84,7 @@ int XOR (int Rd, int Rs1, int Rs2) {
 int SRL (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
-  cur = CURRENT_STATE.REGS[Rs1] >> (CURRENT_STATE.REGS[Rs2] >> 27);
+  cur = CURRENT_STATE.REGS[Rs1] >> CURRENT_STATE.REGS[Rs2];
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
@@ -92,10 +93,17 @@ int SRL (int Rd, int Rs1, int Rs2) {
 int SRA (int Rd, int Rs1, int Rs2) {
 
   int cur = 0; 
-  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> (CURRENT_STATE.REGS[Rs2] >> 27), 27);
+  int val = (CURRENT_STATE.REGS[Rs1] >> CURRENT_STATE.REGS[Rs2]); 
+  int sign = 32;
+  for(int i = 32; i >= 0; i--) {
+    if ((val >> i) == 1) {
+    sign = i;
+    }
+  }
+
+  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> CURRENT_STATE.REGS[Rs2], sign);
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
-
 
 }
 int OR (int Rd, int Rs1, int Rs2) {
@@ -213,9 +221,17 @@ int SRLI (int Rd, int Rs1, int ZImm  ) {
 }
 
 int SRAI (int Rd, int Rs1, int ZImm  ) {
-
+  
   int cur = 0;
-  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> ZImm, 27);
+  int val = ((CURRENT_STATE.REGS[Rs1] >> ZImm)); 
+  int sign = 32;
+  for(int i = 32; i >= 0; i--) {
+    if (((val) >> i) == 1) {
+    sign = i;
+    }
+  }
+
+  cur = SIGNEXT(CURRENT_STATE.REGS[Rs1] >> ZImm, sign);
   NEXT_STATE.REGS[Rd] = cur;
   return 0;
 
@@ -265,7 +281,7 @@ int BLT (int Rs1, int Rs2, int Imm ) {
 
   int cur = 0;
   Imm = Imm << 1;
-  if (CURRENT_STATE.REGS[Rs1] < CURRENT_STATE.REGS[Rs2])
+  if (CURRENT_STATE.REGS[Rs1] <= CURRENT_STATE.REGS[Rs2])
     NEXT_STATE.PC = (CURRENT_STATE.PC + 4) + (SIGNEXT(Imm,12));
   return 0;
 
@@ -285,7 +301,7 @@ int BLTU (int Rs1, int Rs2, int Imm ) {
 
   int cur = 0;
   Imm = Imm << 1;
-  if (CURRENT_STATE.REGS[Rs1] < ZEROEXT(CURRENT_STATE.REGS[Rs2]))
+  if (CURRENT_STATE.REGS[Rs1] <= ZEROEXT(CURRENT_STATE.REGS[Rs2]))
     NEXT_STATE.PC = (CURRENT_STATE.PC + 4) + (SIGNEXT(Imm,12));
   return 0;
 
