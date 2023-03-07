@@ -85,7 +85,8 @@ module riscvsingle (input  logic        clk, reset,
    logic 				ALUSrc, RegWrite, Jump, Zero, ResultSrc;
    logic [2:0] 				ALUControl, ImmSrc;
    
-   controller c (Instr[6:0], Instr[14:12], Instr[30], Zero,
+   controller c (Instr[6:0], Instr[14:12], Instr[30], 
+     Zero, C, V, N,
 		 ResultSrc, MemWrite, PCSrc,
 		 ALUSrc, RegWrite, Jump,
 		 ImmSrc, ALUControl);
@@ -93,7 +94,7 @@ module riscvsingle (input  logic        clk, reset,
    datapath dp (clk, reset, ResultSrc, PCSrc,
 		ALUSrc, RegWrite,
 		ImmSrc, ALUControl,
-		Zero, PC, Instr,
+		Zero, C, V, N, PC, Instr,
 		ALUResult, WriteData, ReadData);
    
 endmodule // riscvsingle
@@ -102,28 +103,30 @@ module controller (input  logic [6:0] op,
 		   input  logic [2:0] funct3,
 		   input  logic       funct7b5,
 		   input  logic       Zero,
+       input  logic       C,
+       input  logic       V, 
+       input  logic       N, 
 		   output logic       ResultSrc,
 		   output logic       MemWrite,
-		   output logic       PCSrc, ALUSrc,
+		   output logic  ($signed) PCSrc, 
+       output logic       ALUSrc,
 		   output logic       RegWrite, Jump,
 		   output logic [2:0] ImmSrc,
 		   output logic [3:0] ALUControl);
    
    logic [1:0] 			      ALUOp;
-  // logic 			      Branch;
-  // logic            beq, bne, blt, bltu, bge, bgeu;
+   logic                  Branch;
+
+  
    
    maindec md (op, ResultSrc, MemWrite, Branch,
 	       ALUSrc, RegWrite, Jump, PCSrc, ImmSrc, ALUOp);
    aludec ad (op[5], funct3, funct7b5, ALUOp, ALUControl);
-  // fix branch assignments
-  // assign beq = Branch & (Zero ^ funct3[0]) | Jump;
+
   
-  assign PCSrc = Branch & (Zero )
-   
+  assign PCSrc = Branch & ((Zero ^ funct3[0]) | (N ^ V) | (zero|(N ^ V)) | (~Zero & ~(N ^ V)) | (~(N ^ V))) | Jump;
    
 
-   assign PCSrc = Branch & (Zero ^ funct3[0]) | Jump;
    
 endmodule // controller
 
@@ -201,6 +204,9 @@ module datapath (input  logic        clk, reset,
 		 input  logic [2:0]  ImmSrc,
 		 input  logic [2:0]  ALUControl,
 		 output logic 	     Zero,
+     output logic        C,
+     output logic        V,
+     output logic        Neg, 
 		 output logic [31:0] PC,
 		 input  logic [31:0] Instr,
 		 output logic [31:0] ALUResult, WriteData,
@@ -225,7 +231,7 @@ module datapath (input  logic        clk, reset,
 
    // ALU logic
    mux2 #(32)  srcbmux (WriteData, ImmExt, ALUSrc, SrcB);
-   alu  alu (SrcA, SrcB, ALUControl, ALUResult, Zero); 
+   alu  alu (SrcA, SrcB, ALUControl, ALUResult, Zero, Neg, V, C); // added ALU flags for branch use to output
    mux2 #(32) resultmux (ALUResult, ReadData, ResultSrc, Result);
 
 endmodule // datapath
@@ -243,7 +249,7 @@ module extend (input  logic [31:7] instr,
 	       input  logic [2:0]  immsrc,
 	       output logic [31:0] immext);
    
-   always_comb
+   always_comb //
      case(immsrc)
        // I−type
        3'b000:  immext = {{20{instr[31]}}, instr[31:20]};
@@ -338,12 +344,13 @@ endmodule // dmem
 module alu (input  logic [31:0] a, b,
             input  logic [3:0] 	alucontrol,
             output logic [31:0] result,
-            output logic 	zero);
+            output logic 	zero,
+            output logic  carry,
+            output logic  v,
+            output logic  neg);
 
-   logic [31:0] 	       condinvb, sum;
-   logic 		       v;              // overflow
+   logic [31:0] 	       condinvb, sum;  // overflow
    logic 		       isAddSub;       // true when is add or subtract operation
-   logic           carry;
 
    assign condinvb = alucontrol[0] ? ~b : b; 
    assign {carry, sum} = a + condinvb + alucontrol[0]; // creates sum operation
@@ -365,6 +372,7 @@ module alu (input  logic [31:0] a, b,
        default: result = 32'bx;
      endcase
 
+   assign neg = ~(result[31]) ? 1 : 0;
    assign zero = (result == 32'b0); 
    assign v = ~(alucontrol[0] ^ a[31] ^ b[31]) & (a[31] ^ sum[31]) & isAddSub; 
   
